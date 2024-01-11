@@ -1,6 +1,12 @@
-# LED-picture-module
+# LED-picture-module #
 
-First steps for converting the picture module:
+## How to solder to support the 64 pixel board ##
+
+https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi/assembly
+
+(Very bottom of page)
+
+## First steps for converting the picture module: ##
 
 The picture module is based on the PIL library, which the rpi-rgb-led matrix class has support for!
 
@@ -14,7 +20,7 @@ from rgbmatrix import RGBMatrix, RGBMatrixOptions
 -In the new_picture function, add
 
 -----
-# Configuration for the matrix
+ Configuration for the matrix
 options = RGBMatrixOptions()
 options.rows = 32
 options.chain_length = 1
