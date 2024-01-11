@@ -6,6 +6,10 @@ https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-rasp
 
 (Very bottom of page)
 
+## magnetic feet ##
+
+https://www.adafruit.com/product/4631
+
 ## First steps for converting the picture module: ##
 
 The picture module is based on the PIL library, which the rpi-rgb-led matrix class has support for!
