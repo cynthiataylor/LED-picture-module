@@ -168,7 +168,7 @@ def new_picture(width, height):
     picture.new_picture(800, 600) #Creates a blank 800x600 picture
     ```
     """
-    options = RGBMatrixOptions()
+    options = RGBMatrixOptions() #update
     options.rows = 64 #change this to board's width
     options.chain_length = 1
     options.parallel = 1
