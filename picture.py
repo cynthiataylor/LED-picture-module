@@ -150,12 +150,14 @@ CANVAS = None
 IMAGE = None
 DRAW = None
 TK_IMAGE = None
+MATRIX = None
 
 OUTLINE_COLOR = parse_color("black")
 FILL_COLOR = parse_color("white")
 PEN_WIDTH = 1
 PEN_POSITION = (0, 0)
 PEN_ROTATION = 0
+
 
 
 def new_picture(width, height):
@@ -191,6 +193,7 @@ def new_picture(width, height):
         change_picture_size(width, height)
     IMAGE = Image.new("RGB", (width, height), color=(255, 255, 255))
     DRAW = ImageDraw.Draw(IMAGE)
+    
     MATRIX.SetImage(IMAGE, 0, 0)
 
 
