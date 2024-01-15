@@ -54,8 +54,9 @@ The following is a list of supported color names:
 
 import math
 import tkinter
-
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageTk
+from rgbmatrix import RGBMatrix, RGBMatrixOptions
+
 
 __all__ = [
     "blank_image",
@@ -156,6 +157,10 @@ PEN_WIDTH = 1
 PEN_POSITION = (0, 0)
 PEN_ROTATION = 0
 
+def draw_on_matrix():
+    """ Draw on matrix"""
+    matrix.SetImage(IMAGE, 0, 0)
+
 
 def new_picture(width, height):
     """
@@ -184,6 +189,15 @@ def new_picture(width, height):
         change_picture_size(width, height)
     IMAGE = Image.new("RGB", (width, height), color=(255, 255, 255))
     DRAW = ImageDraw.Draw(IMAGE)
+
+    # Configuration for the matrix
+    options = RGBMatrixOptions()
+    options.rows = 32
+    options.chain_length = 1
+    options.parallel = 1
+    options.hardware_mapping = 'adafruit-hat'
+
+    matrix = RGBMatrix(options = options)
 
 
 def save_picture(path):
