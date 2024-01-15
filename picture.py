@@ -56,7 +56,10 @@ import math
 import tkinter
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageTk
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81d88f89bb9efde3be75a57d4de34233c1051a04
 
 __all__ = [
     "blank_image",
@@ -150,6 +153,7 @@ CANVAS = None
 IMAGE = None
 DRAW = None
 TK_IMAGE = None
+MATRIX = None
 
 OUTLINE_COLOR = parse_color("black")
 FILL_COLOR = parse_color("white")
@@ -162,6 +166,7 @@ def draw_on_matrix():
     matrix.SetImage(IMAGE, 0, 0)
 
 
+
 def new_picture(width, height):
     """
     Create a new picture with the given width and height. This function will clear
@@ -172,7 +177,13 @@ def new_picture(width, height):
     picture.new_picture(800, 600) #Creates a blank 800x600 picture
     ```
     """
-    global ROOT, FRAME, CANVAS, IMAGE, DRAW
+    options = RGBMatrixOptions() #update
+    options.rows = 64 #change this to board's width
+    options.chain_length = 1
+    options.parallel = 1
+    options.hardware_mapping = 'adafruit-hat'
+    global ROOT, FRAME, CANVAS, IMAGE, DRAW, MATRIX
+
 
     if ROOT is None:
         ROOT = tkinter.Tk()
@@ -189,6 +200,8 @@ def new_picture(width, height):
         change_picture_size(width, height)
     IMAGE = Image.new("RGB", (width, height), color=(255, 255, 255))
     DRAW = ImageDraw.Draw(IMAGE)
+    
+    MATRIX.SetImage(IMAGE, 0, 0)
 
     # Configuration for the matrix
     options = RGBMatrixOptions()
