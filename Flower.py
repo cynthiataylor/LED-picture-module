@@ -1,17 +1,12 @@
 import picture
 import time
-import keyboard
 
 canvas = 64
 picture.new_picture(canvas, canvas)
 
-def stop_beep(_): #You need to test this one
-    global beep
-    beep = False
 
-keyboard.add_hotkey("Ctrl+C", stop_beep)
 
-picture.draw_text((10, 2), "EXIT", font="Arial.ttf", fill="red", width=picture.PEN_WIDTH)
+picture.draw_text(10, 2, "EXIT", font_size=1)
 
 beep = True
 while beep:
