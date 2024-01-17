@@ -1,6 +1,6 @@
 import picture
 import time
-
+#save
 canvas = 64
 picture.new_picture(canvas, canvas)
 
