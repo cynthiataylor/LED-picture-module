@@ -12,7 +12,6 @@ def stop_beep(_): #You need to test this one
 keyboard.add_hotkey("Ctrl+C", stop_beep)
 
 picture.draw_text((10, 2), "EXIT", 1)
-
 beep = True
 while beep:
     for i in range(30):
