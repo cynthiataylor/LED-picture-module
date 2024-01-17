@@ -195,7 +195,6 @@ def new_picture(width, height):
     IMAGE = Image.new("RGB", (width, height), color=(255, 255, 255))
     DRAW = ImageDraw.Draw(IMAGE)
     MATRIX =  RGBMatrix(options = options)
-
 def draw_on_matrix():
     """ Drawign on the matrix instead of the computer screen"""
     MATRIX.SetImage(IMAGE, 0, 0)
