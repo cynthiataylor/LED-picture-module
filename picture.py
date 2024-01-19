@@ -55,7 +55,7 @@ The following is a list of supported color names:
 import math
 import tkinter
 
-# from rgbmatrix import RGBMatrix, RGBMatrixOptions
+from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageTk
 
 __all__ = [
@@ -152,7 +152,7 @@ DRAW = None
 TK_IMAGE = None
 matrix = None
 
-# matrix = RGBMatrix(options = options)
+#matrix = RGBMatrix(options = options)
 
 
 OUTLINE_COLOR = parse_color("black")
@@ -175,12 +175,12 @@ def new_picture(width, height):
     global ROOT, FRAME, CANVAS, IMAGE, DRAW, matrix
 
     # Configuration for the matrix
-    # options = RGBMatrixOptions()
-    # options.rows = 64
-    # options.cols = 64
-    # options.chain_length = 1
-    # options.parallel = 1
-    # options.hardware_mapping = 'adafruit-hat'
+    options = RGBMatrixOptions()
+    options.rows = 64
+    options.cols = 64
+    options.chain_length = 1
+    options.parallel = 1
+    options.hardware_mapping = 'adafruit-hat'
 
     
 
@@ -199,11 +199,11 @@ def new_picture(width, height):
         change_picture_size(width, height)
     IMAGE = Image.new("RGB", (width, height), color=(255, 255, 255))
     DRAW = ImageDraw.Draw(IMAGE)
-    # matrix = RGBMatrix(options = options)
+    matrix = RGBMatrix(options = options)
 
-# def draw_on_matrix():
-#     while True:
-#         matrix.SetImage(IMAGE, 0, 0)
+def draw_on_matrix():
+     #while True:
+    matrix.SetImage(IMAGE, 0, 0)
 
 def save_picture(path):
     """
