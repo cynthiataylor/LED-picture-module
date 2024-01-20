@@ -5,25 +5,21 @@ canvas = 64
 
 picture.new_picture(canvas, canvas)
 
-picture.set_fill_color("black")
-picture.draw_filled_rectangle(-1,-1,65,65)
-
-color = "red"
-
-position = 0
-text = "Winter"
-
-while True:
-	color = 'black' if color == "red" else 'red'
-	picture.set_fill_color(color)
-	picture.set_outline_color(color)
-	picture.draw_filled_circle(32,32,27)
-	print(color)
-	picture.draw_on_matrix()
-	sleep(1)
-
-
-    
+picture.draw_text(10, 2, "EXIT", font_size = 6)
 
 
 
+beep = True
+while beep:
+    picture.set_fill_color("red")
+    picture.draw_filled_circle(32, 40, 27)
+    picture.display()
+    time.sleep(2)
+
+    picture.set_fill_color("black")
+    picture.draw_filled_circle(32, 40, 27)
+    picture.display()
+    time.sleep(2)
+
+    # Pause for 1 second
+    time.sleep(1)
