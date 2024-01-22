@@ -1,27 +1,19 @@
 import picture
-import time
-#save
-canvas = 64
+from time import sleep
 
-picture.new_picture(canvas, canvas)
-
-#picture.draw_text(10, 2, "EXIT", font_size = 12)
-color = 'red'
-picture.set_fill_color("black")
-picture.draw_filled_square(0, 0, canvas)
-while True:
-    
-    color = 'red' if color == 'blue' else 'blue'
-    
-    #picture.set_outline_color(color)
-    print(color)
-    picture.set_fill_color(color)
-    picture.draw_circle(32, 32, 27)
-    
-    picture.draw_on_matrix()
-
-    time.sleep(1)
-    
+picture.new_picture(64,64)
 
 
+picture.set_fill_color("green")
+picture.draw_filled_rectangle(0,0,64,64)
 
+color = "red"
+
+for i in range(10):
+	color = 'blue' if color == "red" else 'red'
+	picture.set_fill_color(color)
+	picture.set_outline_color(color)
+	picture.draw_filled_circle(10,10,10)
+	print(color)
+	picture.draw_on_matrix()
+	sleep(3)

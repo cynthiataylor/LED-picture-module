@@ -17,7 +17,7 @@ while True:
 	color = 'black' if color == "red" else 'red'
 	picture.set_fill_color(color)
 	picture.set_outline_color(color)
-	picture.draw_filled_circle(32,32,27)
+	picture.draw_filled_circle(32,35,27)
 	print(color)
 	picture.draw_on_matrix()
 	sleep(1)
