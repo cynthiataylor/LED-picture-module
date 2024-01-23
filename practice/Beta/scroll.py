@@ -40,7 +40,7 @@ while x < 1000:
         picture.set_fill_color('black')
         picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
 
-    picture.draw_filled_square((x) * ((int(sys.argv[1])-20)/12),y,50)
+    picture.draw_filled_square((x) * ((int(sys.argv[1])-20)/12),y,(int(sys.argv[3]))
     print(((x) * (int(sys.argv[1])-20),y))
         
     red = (red - 20) % 250
