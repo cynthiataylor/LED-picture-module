@@ -45,7 +45,7 @@ while True:
 
         # pictures.display()
         # picture.draw_on_matrix()
-        
+
 
         blue = (blue - 3 * t) % 255 
         green = (green + y) % 255

@@ -6,7 +6,7 @@ canvas = 128
 picture.new_picture(canvas, canvas)
 
 
-
+color = "red"
 picture.set_fill_color("black")
 picture.draw_filled_rectangle(-1,-1,129,129)
 picture.draw_text(10, 2, "EXIT", font_size = 6)
