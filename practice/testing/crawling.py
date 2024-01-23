@@ -11,21 +11,26 @@ green = 200
 blue = 45
 
 while True:
-    for i in range(200):
+    for i in range(100):
         picture.set_fill_color(red,green,blue)
         picture.set_outline_color(red,green,blue)
         picture.set_pen_width(200)
         # picture.set_pen_x(300)
         # picture.set_pen_y(300)
         picture.set_position(int(sys.argv[1])//2,int(sys.argv[1])//2)
-        picture.draw_forward(200)
+        picture.draw_forward(i * 2)
         picture.display()
-        time.sleep(1)
+        time.sleep(0)
         picture.draw_forward(200)
+        picture.rotate(120)
+
         picture.set_fill_color("black")
         picture.set_outline_color("black")
         picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
-        picture.rotate(100)
+       
+
+
+        
 
         # if i == 100:
         #     picture.draw_filled_square(int(sys.argv[1])//2,int(sys.argv[1])//2, 10)
