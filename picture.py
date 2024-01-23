@@ -173,16 +173,14 @@ def new_picture(width, height):
     ```
     """
     global ROOT, FRAME, CANVAS, IMAGE, DRAW, MATRIX
+    global ROOT, FRAME, CANVAS, IMAGE, DRAW, MATRIX
     options = RGBMatrixOptions() #update
     options.rows = 64 #change this to board's width
     options.chain_length = 1
     options.parallel = 1
     options.hardware_mapping = 'adafruit-hat'
-    options.pixel_mapper_config ="U-mapper"
-    
-    MATRIX = RGBMatrix(options = options)
+    global ROOT, FRAME, CANVAS, IMAGE, DRAW, MATRIX
 
-    
 
     if ROOT is None:
         ROOT = tkinter.Tk()
@@ -199,11 +197,11 @@ def new_picture(width, height):
         change_picture_size(width, height)
     IMAGE = Image.new("RGB", (width, height), color=(255, 255, 255))
     DRAW = ImageDraw.Draw(IMAGE)
-    matrix = RGBMatrix(options = options)
 
 def draw_on_matrix():
-     #while True:
-    matrix.SetImage(IMAGE, 0, 0)
+    global MATRIX
+    MATRIX.SetImage(IMAGE, 0, 0)
+
 
 def save_picture(path):
     """
