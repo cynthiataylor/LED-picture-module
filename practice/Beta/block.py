@@ -2,10 +2,11 @@ import picture
 # from picture import *
 import random
 import time
+import sys
 
-picture.new_picture(800,400)
+picture.new_picture(int(sys.argv[1]),int(sys.argv[1]))
 picture.set_fill_color("black")
-picture.draw_filled_rectangle(0,0,800,400)
+picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
 
 red = 255
 green = 200
@@ -17,7 +18,7 @@ positions = []
 counter = 0
 while True:
     for t in range(4):
-        h = random.randint(20,400)
+        h = random.randint(20,int(sys.argv[1]))
         x+= h
 
         picture.set_fill_color(red,green,blue)
@@ -39,7 +40,7 @@ while True:
 
         print(counter)
         # picture.set_fill_color("black")
-        picture.draw_filled_rectangle(0,0,800,400)
+        picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
 
 
         # picture.display()
