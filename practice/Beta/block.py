@@ -44,7 +44,7 @@ while True:
 
 
         # pictures.display()
-        # picture.draw_on_matrix()
+        picture.draw_on_matrix()
 
 
         blue = (blue - 3 * t) % 255 
