@@ -38,7 +38,7 @@ while True:
             x = 0
 
         print(counter)
-        picture.set_fill_color("black")
+        # picture.set_fill_color("black")
         picture.draw_filled_rectangle(0,0,800,400)
 
 
