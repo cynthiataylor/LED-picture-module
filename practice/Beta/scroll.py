@@ -52,8 +52,8 @@ while x < 1000:
     green = (blue + 20) % 255
 
 
-    # display()
-    draw_on_matrix()
+    display()
+    # draw_on_matrix()
     # time.sleep(1)
 
     
