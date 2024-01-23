@@ -7,11 +7,9 @@ picture.new_picture(canvas, canvas)
 
 
 
-
 picture.set_fill_color("black")
 picture.draw_filled_rectangle(-1,-1,129,129)
-
-color = "red"
+picture.draw_text(10, 2, "EXIT", font_size = 6)
 
 
 while True:
@@ -30,6 +28,19 @@ while True:
 
 
     
+4e083faaee121492ded4d021bc7a4130
 
+beep = True
+while beep:
+    picture.set_fill_color("red")
+    picture.draw_filled_circle(32, 40, 27)
+    picture.display()
+    time.sleep(2)
 
+    picture.set_fill_color("black")
+    picture.draw_filled_circle(32, 40, 27)
+    picture.display()
+    time.sleep(2)
 
+    # Pause for 1 second
+    time.sleep(1)
