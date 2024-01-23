@@ -21,9 +21,11 @@ def circle(width,height):
         picture.draw_circle(width//2,height//2,radius)
         radius += 20
         try:
-            picture.display()
-        except:
             picture.draw_on_matrix()
+            
+        except:
+            
+            picture.display()
 
         if radius == 400:
             radius = 20
