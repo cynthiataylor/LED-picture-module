@@ -2,6 +2,7 @@
 from samplebase import SampleBase
 
 class SimpleSquare(SampleBase):
+
     red = 255
     green = 10
     blue = 200
@@ -25,7 +26,6 @@ class SimpleSquare(SampleBase):
                     offset_canvas.SetPixel(x//2, (k//2) + (self.matrix.width)//2,self.red, self.green,self.blue)
                     offset_canvas.SetPixel(x//2 + (self.matrix.width)//2 ,(k//2)+ (self.matrix.width)//2,self.red, self.green,self.blue)
                      
-
                     self.red = (self.red - 20) % 250
                     self.blue = (self.blue - 20) % 250
                     self.green = (self.green + 20) % 200

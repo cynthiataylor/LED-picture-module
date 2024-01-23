@@ -54,8 +54,8 @@ The following is a list of supported color names:
 
 import math
 import tkinter
+import time
 
-from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageTk
 
 __all__ = [
@@ -150,17 +150,12 @@ CANVAS = None
 IMAGE = None
 DRAW = None
 TK_IMAGE = None
-matrix = None
-
-#matrix = RGBMatrix(options = options)
-
 
 OUTLINE_COLOR = parse_color("black")
 FILL_COLOR = parse_color("white")
 PEN_WIDTH = 1
 PEN_POSITION = (0, 0)
 PEN_ROTATION = 0
-
 
 def new_picture(width, height):
     """
@@ -172,17 +167,7 @@ def new_picture(width, height):
     picture.new_picture(800, 600) #Creates a blank 800x600 picture
     ```
     """
-    global ROOT, FRAME, CANVAS, IMAGE, DRAW, MATRIX
-    options = RGBMatrixOptions() #update
-    options.rows = 64 #change this to board's width
-    options.chain_length = 1
-    options.parallel = 1
-    options.hardware_mapping = 'adafruit-hat'
-    options.pixel_mapper_config ="U-mapper"
-    
-    MATRIX = RGBMatrix(options = options)
-
-    
+    global ROOT, FRAME, CANVAS, IMAGE, DRAW
 
     if ROOT is None:
         ROOT = tkinter.Tk()
@@ -197,13 +182,12 @@ def new_picture(width, height):
     else:
         CANVAS.delete('all')
         change_picture_size(width, height)
+        
+    
     IMAGE = Image.new("RGB", (width, height), color=(255, 255, 255))
     DRAW = ImageDraw.Draw(IMAGE)
-    matrix = RGBMatrix(options = options)
+    
 
-def draw_on_matrix():
-     #while True:
-    matrix.SetImage(IMAGE, 0, 0)
 
 def save_picture(path):
     """
