@@ -29,16 +29,6 @@ while True:
         picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
        
 
-
-        
-
-        # if i == 100:
-        #     picture.draw_filled_square(int(sys.argv[1])//2,int(sys.argv[1])//2, 10)
-        # if i == 199:
-        #     picture.set_fill_color("black")
-        #     picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
-        #     picture.rotate(150)
-
             
         red = (red - 20) % 250
         blue = (blue - 20) % 250
