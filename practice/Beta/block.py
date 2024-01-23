@@ -1,25 +1,11 @@
-from folders import importing_library_picture_from_scroll_folder
-
-importing_library_picture_from_scroll_folder() # to avoid repetition of files in the same folder
-
-from Module.picture import *
-
-
-# from picture import *
-from folders import importing_library_picture_from_scroll_folder
-
-importing_library_picture_from_scroll_folder() # to avoid repetition of files in the same folder
-
-from Module.picture import *
-
-
+import picture
 # from picture import *
 import random
 import time
 
-new_picture(800,400)
-set_fill_color("black")
-draw_filled_rectangle(0,0,800,400)
+picture.new_picture(800,400)
+picture.set_fill_color("black")
+picture.draw_filled_rectangle(0,0,800,400)
 
 red = 255
 green = 200
@@ -34,9 +20,9 @@ while True:
         h = random.randint(20,400)
         x+= h
 
-        set_fill_color(red,green,blue)
+        picture.set_fill_color(red,green,blue)
         if counter % 4 == 0 or counter % 3 == 0:
-            draw_filled_square(x,y,50)
+            picture.draw_filled_square(x,y,50)
 
         x = t * 50
         counter += 1
@@ -53,11 +39,12 @@ while True:
 
         print(counter)
         if counter %10 == 0:
-            set_fill_color("black")
-            draw_filled_rectangle(0,0,800,400)
+            picture.set_fill_color("black")
+            picture.draw_filled_rectangle(0,0,800,400)
 
 
-        display()
+        # picture.display()
+            picture.draw_on_matrix()
 
         blue = (blue - 3 * t) % 255 
         green = (green + y) % 255

@@ -10,9 +10,6 @@ picture.set_fill_color("black")
 picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
 
 
-# set_outline_color("white")
-# set_pen_width(2)
-
 red = 255
 green = 200
 blue = 45
@@ -47,11 +44,8 @@ while x < 1000:
     blue = (blue - 20) % 250
     green = (blue + 20) % 255
 
-
     # display()
     picture.draw_on_matrix()
     time.sleep((int(sys.argv[2])))
-
-    
 
 
