@@ -38,13 +38,12 @@ while True:
             x = 0
 
         print(counter)
-        if counter %10 == 0:
-            picture.set_fill_color("black")
-            picture.draw_filled_rectangle(0,0,800,400)
+        picture.set_fill_color("black")
+        picture.draw_filled_rectangle(0,0,800,400)
 
 
         # picture.display()
-            picture.draw_on_matrix()
+        picture.draw_on_matrix()
 
         blue = (blue - 3 * t) % 255 
         green = (green + y) % 255
