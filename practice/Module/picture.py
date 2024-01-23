@@ -471,11 +471,12 @@ def display():
     picture.display()
     ```
     """
-    global TK_IMAGE
-    TK_IMAGE = ImageTk.PhotoImage(IMAGE)
-    CANVAS.delete('all')
-    CANVAS.create_image(0, 0, image=TK_IMAGE, anchor="nw")
-    CANVAS.update()
+    global TK_IMAGE, matrix
+    # TK_IMAGE = ImageTk.PhotoImage(IMAGE)
+    # CANVAS.delete('all')
+    # CANVAS.create_image(0, 0, image=TK_IMAGE, anchor="nw")
+    # CANVAS.update()
+    matrix.SetImage(IMAGE, 0, 0)
 
 
 def delay(milliseconds):
