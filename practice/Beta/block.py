@@ -40,11 +40,11 @@ while True:
 
         print(counter)
         # picture.set_fill_color("black")
-        picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
+        # pictures.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
 
 
-        # picture.display()
-        picture.draw_on_matrix()
+        # pictures.display()
+        # picture.draw_on_matrix()
         
 
         blue = (blue - 3 * t) % 255 
