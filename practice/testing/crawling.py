@@ -1,33 +1,40 @@
 import sys
 import picture
+import time
 
-picture.new_picture(int(sys.argv[2]),int(sys.argv[2]))
+picture.new_picture(int(sys.argv[1]),int(sys.argv[1]))
 picture.set_fill_color("black")
-picture.draw_filled_rectangle(0,0,int(sys.argv[2]),int(sys.argv[2]))
+picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
 
-picture.set_fill_color('red')
-def snake(positions):
-    pos = positions
-   
+red = 255
+green = 200
+blue = 45
 
+while True:
+    for i in range(200):
+        picture.set_fill_color(red,green,blue)
+        picture.set_outline_color(red,green,blue)
+        picture.set_pen_width(200)
+        # picture.set_pen_x(300)
+        # picture.set_pen_y(300)
+        picture.set_position(int(sys.argv[1])//2,int(sys.argv[1])//2)
+        picture.draw_forward(200)
+        picture.display()
+        time.sleep(1)
+        picture.draw_forward(200)
+        picture.set_fill_color("black")
+        picture.set_outline_color("black")
+        picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
+        picture.rotate(100)
 
-    for i in range(len(positions[-2:])):
-        positions[-2:][i][1] += 1
-        print(pos)
-        while True:
-            for i in range(0,len(pos)-1):
-                picture.draw_filled_square(pos[i][0] * 50,pos[i][1] * 50,50)
-                
-                pos = positions[-2:]
-                pos.append([(pos[-1][0] + 1),(pos[-1][1])])
-                picture.display()
-        
-    # return pos
+        # if i == 100:
+        #     picture.draw_filled_square(int(sys.argv[1])//2,int(sys.argv[1])//2, 10)
+        # if i == 199:
+        #     picture.set_fill_color("black")
+        #     picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
+        #     picture.rotate(150)
 
-
-argm = int(sys.argv[1])
-positions = []
-for i in range(argm):
-    positions.append([i,0])
-
-snake(positions)
+            
+        red = (red - 20) % 250
+        blue = (blue - 20) % 250
+        green = (blue + 20) % 255
