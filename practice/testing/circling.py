@@ -11,6 +11,8 @@ def circle(width,height):
 
     radius = 20
     size = 2
+
+    computer = sys.argv[-1]
     while True:
         picture.set_outline_color(red,green,blue)
         if size ==10:
@@ -20,12 +22,11 @@ def circle(width,height):
         size += 1
         picture.draw_circle(width//2,height//2,radius)
         radius += 20
-        try:
-            picture.draw_on_matrix()
-            
-        except:
-            
+
+        if computer == "L":
             picture.display()
+        elif computer == "D":
+            picture.draw_on_matrix()
 
         if radius == 400:
             radius = 20
