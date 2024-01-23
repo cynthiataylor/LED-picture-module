@@ -23,7 +23,7 @@ while True:
 
         picture.set_fill_color(red,green,blue)
         if counter % 4 == 0 or counter % 3 == 0:
-            picture.draw_filled_square(x,y,50)
+            picture.draw_filled_square(x,y,int(sys.argv[3]))
 
         x = t * 50
         counter += 1
