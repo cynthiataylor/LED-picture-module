@@ -27,8 +27,6 @@ while True:
 	sleep(1)
 
 
-    
-4e083faaee121492ded4d021bc7a4130
 
 beep = True
 while beep:
