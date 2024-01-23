@@ -6,6 +6,14 @@ from Module.picture import *
 
 
 # from picture import *
+from folders import importing_library_picture_from_scroll_folder
+
+importing_library_picture_from_scroll_folder() # to avoid repetition of files in the same folder
+
+from Module.picture import *
+
+
+# from picture import *
 import random
 import time
 
