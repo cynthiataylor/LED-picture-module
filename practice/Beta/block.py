@@ -30,6 +30,7 @@ while True:
         if x >= int(sys.argv[1])//4:
             x = 0
             y += 50
+            
         if y >= int(sys.argv[1])//2:
             y = int(sys.argv[1])//3
             x = 0
@@ -39,18 +40,13 @@ while True:
             x = 0
 
         print(counter)
-        # picture.set_fill_color("black")
-        # pictures.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
-
-
-        # pictures.display()
+  
         picture.draw_on_matrix()
 
 
         blue = (blue - 3 * t) % 255 
         green = (green + y) % 255
         green = (green //(x + 1))%255
-        # print(positions)
         
         time.sleep(int(sys.argv[2]))
 
