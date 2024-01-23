@@ -150,7 +150,7 @@ CANVAS = None
 IMAGE = None
 DRAW = None
 TK_IMAGE = None
-MATRIX = None
+matrix = None
 
 OUTLINE_COLOR = parse_color("black")
 FILL_COLOR = parse_color("white")
@@ -170,7 +170,7 @@ def new_picture(width, height):
     picture.new_picture(800, 600) #Creates a blank 800x600 picture
     ```
     """
-    global ROOT, FRAME, CANVAS, IMAGE, DRAW, MATRIX
+    global ROOT, FRAME, CANVAS, IMAGE, DRAW, matrix
     options = RGBMatrixOptions() #update
     options.rows = 64 #change this to board's width
     options.cols = 64
@@ -198,10 +198,10 @@ def new_picture(width, height):
         change_picture_size(width, height)
     IMAGE = Image.new("RGB", (width, height), color=(255, 255, 255))
     DRAW = ImageDraw.Draw(IMAGE)
-    MATRIX = RGBMatrix(options = options)
+    matrix = RGBMatrix(options = options)
 
 def draw_on_matrix():
-    MATRIX.SetImage(IMAGE, 0, 0)
+    matrix.SetImage(IMAGE, 0, 0)
 
 
 def save_picture(path):
