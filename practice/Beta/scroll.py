@@ -21,13 +21,11 @@ positions = []
 
 count = 0
 while x < 1000:
-    # for k in range(7):
     picture.set_fill_color(red,green,blue)
     y = random.randint(4,int(sys.argv[1]))
     count += 1
     x += 1
     positions.append((x,y))
-    # print(x)
     
     if x == 15:
         x = 10
@@ -35,7 +33,7 @@ while x < 1000:
             x = 0
         elif count % 9 == 0:
             y += 2
-        picture.set_fill_color('black')
+        # picture.set_fill_color('black')
         picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
 
     picture.draw_filled_square((x) * ((int(sys.argv[1])-20)/12),y,int(sys.argv[3]))
