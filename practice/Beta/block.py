@@ -44,12 +44,13 @@ while True:
 
 
         # picture.display()
+        picture.draw_on_matrix()
         
 
         blue = (blue - 3 * t) % 255 
         green = (green + y) % 255
         green = (green //(x + 1))%255
         # print(positions)
-        picture.draw_on_matrix()
+        
         time.sleep(int(sys.argv[2]))
 
