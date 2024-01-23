@@ -27,11 +27,11 @@ while True:
 
         x = t * 50
         counter += 1
-        if x >= 150:
+        if x >= int(sys.argv[1]//4):
             x = 0
             y += 50
-        if y >= 300:
-            y = 400
+        if y >= int(sys.argv[1]//2):
+            y = int(sys.argv[1]//3)
             x = 0
             x += 100
             y = 0
