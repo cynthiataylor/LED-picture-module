@@ -40,14 +40,14 @@ while runtime < 2000:
 		# print(pos)
 		# picture.set_outline_color(red//2,green//3,blue//5)
 		pos = 0
-		x += 9
+		x += 12
 		y += 10
 		picture.set_position(x,y)
 
 	# picture.display()
 	picture.draw_on_matrix()
 	picture.rotate(90)
-	time.sleep(0)
+	time.sleep(0.005)
 	pos += 1
 
 	red = (red - 2) % 250
