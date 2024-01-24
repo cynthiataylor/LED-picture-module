@@ -25,7 +25,7 @@ i = 0
 
 taken_pos = []
 runtime = 0
-while runtime < 200:
+while runtime < 2000:
 	runtime += 1
 	taken_pos.append(x)
 	taken_pos.append(y)
