@@ -28,7 +28,7 @@ def circle(width,height):
             picture.display()
         elif computer == "D":
             picture.draw_on_matrix()
-            time.sleep(float(sys.argv[2]))
+            time.sleep(0.03)
 
         if radius >= 40:
             radius = 4
@@ -42,7 +42,7 @@ def circle(width,height):
         blue = (blue - 20) % 250
         green = (blue + 20) % 255
 
-width = int(sys.argv[1])
-height = int(sys.argv[1])
+width = 64
+height = 64
 
 circle(width,height)
