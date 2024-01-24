@@ -26,9 +26,10 @@ angle = 100
 
 picture.set_position(x,y)
 		
-
-while True:
+runtime = 1
+while runtime < 40:
 	#print(x,y)
+	runtime += 1
 	i += 1
 	delete += 1
 	picture.set_outline_color(red,green,blue)
