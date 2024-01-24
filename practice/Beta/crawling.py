@@ -1,5 +1,5 @@
 import sys
-import picture
+import Main.picture as picture
 import time
 
 picture.new_picture(int(sys.argv[1]),int(sys.argv[1]))

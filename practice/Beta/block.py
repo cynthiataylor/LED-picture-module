@@ -1,4 +1,4 @@
-import picture
+import Main.picture as picture
 # from picture import *
 import random
 import time

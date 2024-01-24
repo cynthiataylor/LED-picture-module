@@ -1,4 +1,4 @@
-import picture
+import Main.picture as picture
 import sys
 import time
 def circle(width,height):

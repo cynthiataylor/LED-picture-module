@@ -1,6 +1,6 @@
 
 
-import picture
+import Main.picture as picture
 import random
 import time
 import sys
