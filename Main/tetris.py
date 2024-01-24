@@ -53,6 +53,10 @@ while True:
 	# picture.display()
 	picture.draw_on_matrix()
 	picture.rotate(random.randint(60,65))
+	picture.set_outline_color("orange")
+	picture.draw_forward(10 % x)
+	picture.set_outline_color("white")
+	picture.draw_forward(1 % x)
 	time.sleep(0)
 	pos += 1
 
@@ -60,4 +64,5 @@ while True:
 	blue = (blue - 20) % 250
 	green = (blue + 20) % 255
 	
-	# print(taken_pos)
+	
+	print(taken_pos)
