@@ -47,9 +47,9 @@ while True:
 	if x % 10:
 		x = random.randint(0,64) if random.randint(0,64) not in taken_pos else random.randint(0,64)
 		y = random.randint(0,64) if random.randint(0,64) not in taken_pos else random.randint(0,64)
-	if y >= 6:
-		y = 0
-		x = 2
+	# if y >= 6:
+	# 	y = 0
+	# 	x = 2
 	# picture.display()
 	picture.draw_on_matrix()
 	picture.rotate(random.randint(60,65))
