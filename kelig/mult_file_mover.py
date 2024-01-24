@@ -20,8 +20,12 @@ class MoveFile:
 
 if __name__ == "__main__":
     source_path = os.getcwd()
+<<<<<<< HEAD:mult_file_mover.py
     #destination = "/Users/tntirand/Desktop/mydocs/general/"
     destination = "/home/pi/LED-picture-module/kelig/"
+=======
+    destination = "/Users/tntirand/Desktop/LED-picture-module/kelig"
+>>>>>>> 89c06caf9f77bb92b23ee1ba6171393e955af2dc:kelig/mult_file_mover.py
 
     mover = MoveFile(source_path,destination)
 
