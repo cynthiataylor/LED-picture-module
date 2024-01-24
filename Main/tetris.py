@@ -37,7 +37,7 @@ while True:
 	i += 1
 	if i == 4:
 		i = 0
-	if pos == 8:
+	if pos == 30:
 		# print(pos)
 		# picture.set_outline_color(red//2,green//3,blue//5)
 		pos = 0
