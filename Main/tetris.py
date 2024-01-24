@@ -37,7 +37,7 @@ while True:
 
 	if len(taken_pos) >=4:
 		picture.set_fill_color('green')
-		picture.forward(taken_pos[-3])
+		picture.draw_forward(taken_pos[-3])
 		picture.rotate(taken_pos[-2])
 	i += 1
 	if i == 4:
