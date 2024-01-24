@@ -40,7 +40,7 @@ while runtime < 2000:
 		# print(pos)
 		# picture.set_outline_color(red//2,green//3,blue//5)
 		pos = 0
-		x += 12
+		x += 20
 		y += 10
 		picture.set_position(x,y)
 
