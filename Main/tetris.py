@@ -34,6 +34,11 @@ while True:
 	picture.set_fill_color(red,green,blue)
 	picture.set_outline_color(red,green,blue)
 	picture.draw_forward(i)
+
+	if len(taken_pos) >=4:
+		picture.set_fill_color('green')
+		picture.forward(taken_pos[-3])
+		picture.rotate(taken_pos[-2])
 	i += 1
 	if i == 4:
 		i = 0
