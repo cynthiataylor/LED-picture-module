@@ -64,6 +64,7 @@ while runtime < 4000:
 	picture.set_outline_color("white")
 	picture.draw_forward(1 % change)
 	time.sleep(0)
+	
 	red = (red - 20) % 250
 	blue = (blue - 20) % 250
 	green = (blue + 20) % 255
