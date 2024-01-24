@@ -20,7 +20,7 @@ class MoveFile:
 
 if __name__ == "__main__":
     source_path = os.getcwd()
-    destination = "/Users/tntirand/Desktop/mydocs/general/"
+    destination = "/Users/tntirand/Desktop/LED-picture-module/kelig"
 
     mover = MoveFile(source_path,destination)
 

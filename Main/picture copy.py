@@ -55,8 +55,8 @@ The following is a list of supported color names:
 import math
 import tkinter
 
-from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageTk
+from rgbmatrix import RGBMatrix, RGBMatrixOptions
 
 __all__ = [
     "blank_image",
@@ -152,14 +152,12 @@ DRAW = None
 TK_IMAGE = None
 matrix = None
 
-#matrix = RGBMatrix(options = options)
-
-
 OUTLINE_COLOR = parse_color("black")
 FILL_COLOR = parse_color("white")
 PEN_WIDTH = 1
 PEN_POSITION = (0, 0)
 PEN_ROTATION = 0
+
 
 
 def new_picture(width, height):
@@ -175,10 +173,14 @@ def new_picture(width, height):
     global ROOT, FRAME, CANVAS, IMAGE, DRAW, matrix
     options = RGBMatrixOptions() #update
     options.rows = 64 #change this to board's width
-    options.chain_length = 1
+    options.cols = 64
+    options.chain_length = 4
     options.parallel = 1
     options.hardware_mapping = 'adafruit-hat'
     options.pixel_mapper_config = "U-mapper"
+
+    
+    
 
 
     if ROOT is None:
@@ -197,7 +199,6 @@ def new_picture(width, height):
     IMAGE = Image.new("RGB", (width, height), color=(255, 255, 255))
     DRAW = ImageDraw.Draw(IMAGE)
     matrix = RGBMatrix(options = options)
-
 
 def draw_on_matrix():
     matrix.SetImage(IMAGE, 0, 0)
@@ -475,6 +476,7 @@ def display():
     CANVAS.delete('all')
     CANVAS.create_image(0, 0, image=TK_IMAGE, anchor="nw")
     CANVAS.update()
+
 
 
 def delay(milliseconds):
