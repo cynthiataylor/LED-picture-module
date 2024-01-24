@@ -1,5 +1,6 @@
 import picture
 import sys
+import time
 def circle(width,height):
 
     picture.new_picture(width,height)
@@ -10,7 +11,7 @@ def circle(width,height):
     blue = 45
 
     radius = 20
-    size = 2
+    size = 1
 
     computer = sys.argv[-1]
     while True:
@@ -19,17 +20,18 @@ def circle(width,height):
             size = 2
     
             picture.set_pen_width(size)
-        size += 1
+        size += 2
         picture.draw_circle(width//2,height//2,radius)
-        radius += 20
+        radius += 2
 
         if computer == "L":
             picture.display()
         elif computer == "D":
             picture.draw_on_matrix()
+            time.sleep(0.05)
 
-        if radius == 400:
-            radius = 20
+        if radius >= 40:
+            radius = 4
             picture.set_fill_color("black")
             picture.set_outline_color("black")
             picture.draw_filled_rectangle(0,0,width,height)

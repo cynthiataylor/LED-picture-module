@@ -13,11 +13,12 @@ red = 255
 green = 200
 blue = 45
 x = 1
-while True:
-	picture.set_fill_color(red,green,blue)
-	picture.draw_forward(x)
-	x += 1
-	picture.draw_on_matrix()
+for i in range(64):
+	for j in range(64):
+		picture.set_fill_color(red,green,blue)
+		picture.draw_forward(j)
+		x += 1
+		picture.draw_on_matrix()
 
 	red = (red - 20) % 250
 	blue = (blue - 20) % 250
