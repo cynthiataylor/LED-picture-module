@@ -1,6 +1,6 @@
-import Main.picture as picture
-import time
+import picture
 import random
+import time
 
 
 picture.new_picture(64,64)
