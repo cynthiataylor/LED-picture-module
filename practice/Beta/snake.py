@@ -3,7 +3,7 @@ import time
 import random
 
 
-picture.new_picture(124,124)
+picture.new_picture(64,64)
 
 # Set initial position 
 x, y = 40, 20
@@ -55,9 +55,9 @@ while True:
 	if delete == 64:
 		delete = 0
 	
-	if picture.get_position()[0] <=0 or picture.get_position()[1] <=0:
-		x = random.randint(45,45)
-		y = random.randint(45,45)
+	if picture.get_position()[0] <=0 or picture.get_position()[1] <=0 or picture.get_position()[0] <=64 or picture.get_position()[1] <=64:
+		x = random.randint(10,45)
+		y = random.randint(10,45)
 	
 	
 	

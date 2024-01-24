@@ -56,7 +56,7 @@ import math
 import tkinter
 
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageTk
-# from rgbmatrix import RGBMatrix, RGBMatrixOptions
+from rgbmatrix import RGBMatrix, RGBMatrixOptions
 
 __all__ = [
     "blank_image",
@@ -171,13 +171,13 @@ def new_picture(width, height):
     ```
     """
     global ROOT, FRAME, CANVAS, IMAGE, DRAW, matrix
-    # options = RGBMatrixOptions() #update
-    # options.rows = 64 #change this to board's width
-    # options.cols = 64
-    # options.chain_length = 4
-    # options.parallel = 1
-    # options.hardware_mapping = 'adafruit-hat'
-    # options.pixel_mapper_config = "U-mapper"
+    options = RGBMatrixOptions() #update
+    options.rows = 64 #change this to board's width
+    options.cols = 64
+    options.chain_length = 4
+    options.parallel = 1
+    options.hardware_mapping = 'adafruit-hat'
+    options.pixel_mapper_config = "U-mapper"
 
     
     
@@ -198,7 +198,7 @@ def new_picture(width, height):
         change_picture_size(width, height)
     IMAGE = Image.new("RGB", (width, height), color=(255, 255, 255))
     DRAW = ImageDraw.Draw(IMAGE)
-    # matrix = RGBMatrix(options = options)
+    matrix = RGBMatrix(options = options)
 
 def draw_on_matrix():
     matrix.SetImage(IMAGE, 0, 0)

@@ -10,7 +10,7 @@ def circle(width,height):
     picture.draw_filled_rectangle(0, 0, width, height)
 
     #variablesfh
-    radius = 4
+    radius = 2
     size = 2
     color = [(107, 176, 126), (186, 71, 71), (55, 148, 191), (171, 84, 171), (58, 156, 12), (196, 137, 47)]
     color_index = 0
@@ -33,7 +33,7 @@ def circle(width,height):
         picture.draw_circle(rand_x, rand_y,radius)
         sleep(0.05)
 
-        radius += 4
+        radius += 2
 
         # Matrix or Laptop
         if computer == "L":
@@ -42,8 +42,8 @@ def circle(width,height):
             picture.draw_on_matrix()
 
         # Maximum radius
-        if radius == 24:
-            radius = 4
+        if radius == 16:
+            radius = 2
             color_index += 1
             rand_x = random.randrange(15, 55)
             rand_y = random.randrange(15, 55)
