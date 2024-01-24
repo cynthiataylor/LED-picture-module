@@ -8,9 +8,6 @@ picture.new_picture(64,64)
 # Set initial position 
 x, y = 40, 20
 
-
-
-
 picture.set_fill_color("black")
 picture.set_outline_color("black")
 picture.draw_filled_rectangle(0,0,124,124)
@@ -27,7 +24,7 @@ angle = 100
 picture.set_position(x,y)
 		
 runtime = 1
-while runtime < 40:
+while runtime < 100:
 	#print(x,y)
 	runtime += 1
 	i += 1
