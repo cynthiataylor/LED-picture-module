@@ -15,7 +15,7 @@ def circle(width,height):
 
     computer = 'D'
     runtime = 1
-    while runtime < 4000:
+    while runtime < 400:
         runtime += 2
         picture.set_outline_color(red ,green, blue)
         picture.set_pen_width(size)
