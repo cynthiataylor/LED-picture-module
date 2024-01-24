@@ -9,7 +9,7 @@ def circle(width,height):
     picture.set_fill_color("black")     # Set the fill color after creating the new picture
     picture.draw_filled_rectangle(0, 0, width, height)
 
-    #variables
+    #variablesf
     radius = 4
     size = 2
     color = [(107, 176, 126), (186, 71, 71), (55, 148, 191), (171, 84, 171), (58, 156, 12), (196, 137, 47)]
