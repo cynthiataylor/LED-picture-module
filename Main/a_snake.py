@@ -24,7 +24,7 @@ angle = 100
 picture.set_position(x,y)
 		
 runtime = 1
-while runtime < 3000:
+while runtime < 4000:
 	#print(x,y)
 	runtime += 1
 	i += 1
