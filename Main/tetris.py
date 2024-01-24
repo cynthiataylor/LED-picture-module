@@ -2,14 +2,14 @@ import picture
 import random
 import time
 
-picture.new_picture(640,640)
+picture.new_picture(640,64)
 
 # Set initial position 
 
 
 picture.set_fill_color("black")
 picture.set_outline_color("black")
-picture.draw_filled_rectangle(0,0,640,640)
+picture.draw_filled_rectangle(0,0,64,64)
 
 
 red = 205
@@ -17,8 +17,8 @@ green = 20
 blue = 10
 size = 2
 
-x = 30
-y = 30
+x = 3
+y = 3
 picture.set_position(x,y)
 runtime = 1
 pos = 0
@@ -35,21 +35,21 @@ while runtime > 3000:
 	picture.set_outline_color(red,green,blue)
 	picture.draw_forward(i)
 	i += 1
-	if i == 30:
+	if i == 4:
 		i = 0
-	if pos == 80:
+	if pos == 8:
 		# print(pos)
 		# picture.set_outline_color(red//2,green//3,blue//5)
 		pos = 0
-		x += 99
-		y += 100
+		x += 9
+		y += 10
 		picture.set_position(x,y)
-	if x % 100:
-		x = random.randint(0,500) if random.randint(0,600) not in taken_pos else random.randint(0,600)
-		y = random.randint(0,600) if random.randint(200,500) not in taken_pos else random.randint(0,600)
-	if y >= 600:
+	if x % 10:
+		x = random.randint(0,64) if random.randint(0,64) not in taken_pos else random.randint(0,64)
+		y = random.randint(0,64) if random.randint(0,64) not in taken_pos else random.randint(0,64)
+	if y >= 6:
 		y = 0
-		x = 200
+		x = 2
 	# picture.display()
 	picture.draw_on_matrix()
 	picture.rotate(random.randint(60,65))
