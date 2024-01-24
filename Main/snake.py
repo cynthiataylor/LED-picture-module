@@ -28,7 +28,7 @@ picture.set_position(x,y)
 		
 
 while True:
-	print(x,y)
+	#print(x,y)
 	i += 1
 	delete += 1
 	picture.set_outline_color(red,green,blue)
