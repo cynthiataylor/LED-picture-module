@@ -2,7 +2,7 @@ import picture
 import random
 import time
 
-picture.new_picture(640,64)
+picture.new_picture(64,64)
 
 # Set initial position 
 
