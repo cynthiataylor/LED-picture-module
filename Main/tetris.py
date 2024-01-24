@@ -36,8 +36,6 @@ while True:
 	picture.draw_forward(i)
 
 	if len(taken_pos) >=4:
-		picture.set_fill_color('green')
-		picture.draw_forward(taken_pos[-3])
 		picture.rotate(taken_pos[-2])
 		picture.draw_filled_circle(taken_pos[-3],taken_pos[-2],3)
 	i += 1
