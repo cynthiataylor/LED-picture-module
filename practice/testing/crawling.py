@@ -21,8 +21,8 @@ while True:
         picture.draw_forward(i * 2)
         picture.display()
         time.sleep(0)
-        picture.draw_forward(200)
-        picture.rotate(120)
+        picture.draw_forward(400)
+        picture.rotate(10)
 
         picture.set_fill_color("black")
         picture.set_outline_color("black")

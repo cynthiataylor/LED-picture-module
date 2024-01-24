@@ -43,19 +43,19 @@ while x < 1000:
             x = 0
         elif count % 9 == 0:
             y += 2
-        # picture.set_fill_color('black')
-        #picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
+        picture.set_fill_color('black')
+        picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
 
     picture.draw_filled_square((x) * ((int(sys.argv[1])-20)/12),y,int(sys.argv[3]))
     print(((x) * (int(sys.argv[1])-20),y))
-        
+         
     red = (red - 20) % 250
     blue = (blue - 20) % 250
     green = (blue + 20) % 255
 
     # display()
-    snake(10)
-    #picture.draw_on_matrix()
-    time.sleep((int(sys.argv[2])))
+    #snake(10)
+    picture.draw_on_matrix()
+    time.sleep((float(sys.argv[2])))
 
 

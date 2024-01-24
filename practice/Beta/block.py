@@ -48,5 +48,5 @@ while True:
         green = (green + y) % 255
         green = (green //(x + 1))%255
         
-        time.sleep(int(sys.argv[2]))
+        time.sleep(float(sys.argv[2]))
 
