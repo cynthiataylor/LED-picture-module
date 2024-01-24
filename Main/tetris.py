@@ -54,9 +54,9 @@ while True:
 	picture.draw_on_matrix()
 	picture.rotate(random.randint(60,65))
 	picture.set_outline_color("orange")
-	picture.draw_forward(10 % x)
+	picture.draw_forward(10 % x + 1)
 	picture.set_outline_color("white")
-	picture.draw_forward(1 % x)
+	picture.draw_forward(1 % x + 1)
 	time.sleep(0)
 	pos += 1
 
