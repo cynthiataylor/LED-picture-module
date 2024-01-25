@@ -10,7 +10,6 @@ picture.set_fill_color("black")
 picture.set_outline_color("black")
 picture.draw_filled_rectangle(0,0,64,64)
 
-
 red = 205
 green = 20
 blue = 10
@@ -37,8 +36,6 @@ while runtime < 2000:
 	if i == 4:
 		i = 0
 	if pos == 30:
-		# print(pos)
-		# picture.set_outline_color(red//2,green//3,blue//5)
 		pos = 0
 		x += 20
 		y += 10

@@ -179,10 +179,6 @@ def new_picture(width, height):
     options.hardware_mapping = 'adafruit-hat'
     options.pixel_mapper_config = "U-mapper"
 
-    
-    
-
-
     if ROOT is None:
         ROOT = tkinter.Tk()
         FRAME = tkinter.Frame(ROOT, None, borderwidth=0)
