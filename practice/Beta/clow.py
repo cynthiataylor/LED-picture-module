@@ -11,7 +11,7 @@ red = 255
 green = 200
 blue = 45
 
-sec = 0
+sec = 0.05
 move = 100
 top = 100
 bottom = 0
@@ -31,11 +31,13 @@ red = 255
 green = 200
 blue = 45
 
+rounds = 0
+
 while True:
     for j in range(100):
         i += 1
         picture.set_fill_color(red,green,blue)
-        picture.set_outline_color(red,green,blue)
+        picture.set_outline_color('white')
         picture.set_pen_width(1)
         picture.draw_forward(1)
        
@@ -43,21 +45,23 @@ while True:
         y =  picture.get_position()[1]
         x_position.append(x)
         picture.draw_on_matrix()
-        # time.sleep(sec)
-        if i > 0 and i % 10 == 0:
+        time.sleep(sec)
+        if i > 0 and i % 5 == 0:
             picture.rotate(90)
         pos = picture.get_position()
         if pos[0] + 1 in x_position:
-            print(pos)
             picture.rotate(random.choice([90,180,270]))
-            picture.draw_forward(15)
-        if x >= 500 or y >= 500 or x <= 0 or y <= 0:
+            picture.draw_forward(1)
+        if x >= 125 or y >= 125 or x <= 0 or y <= 0:
             picture.set_position(60,60)
-        if x + 5 >= 70:
+            rounds +=1
+        if x + 5 >= 120:
             i = 0
             picture.rotate(270)
+        if rounds == 3:
+            picture.set_outline_color(red,green,blue)
 
 
-    red = (red - 20) % 250
-    blue = (blue - 20) % 250
-    green = (blue + 20) % 255
+        red = (red - 20) % 250
+        blue = (blue - 20) % 250
+        green = (blue + 20) % 255
