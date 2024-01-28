@@ -2,14 +2,14 @@ import picture
 import random
 import time
 
-picture.new_picture(64,64)
+picture.new_picture(128,128)
 
 # Set initial position 
 
 
 picture.set_fill_color("black")
 picture.set_outline_color("black")
-picture.draw_filled_rectangle(0,0,64,64)
+picture.draw_filled_rectangle(0,0,128,128)
 
 
 red = 205
@@ -41,7 +41,7 @@ while runtime < 2000:
 	i += 1
 	if i == 4:
 		i = 0
-	if pos == 30:
+	if pos == 60:
 		# print(pos)
 		# picture.set_outline_color(red//2,green//3,blue//5)
 		pos = 0
