@@ -26,23 +26,23 @@ angle = 100
 
 picture.set_position(x,y)
 		
-runtime = 400
+runtime = 2000
 while runtime > 0:
 	runtime -=1
 	i += 1
 	delete += 1
 	picture.set_outline_color(red,green,blue)
-	picture.draw_forward(i//8)
+	picture.draw_forward(i//5)
 	picture.rotate(angle)
 	angle += 1
 	picture.draw_on_matrix()
 	#time.sleep(0.0000000001)
 	
-	if angle == 160:
-		angle = random.randint(100,140)
+	if angle == 180:
+		angle = random.randint(60,160)
 	
 	
-	if i == change//3:
+	if i == change//6:
 		picture.set_fill_color("black")
 		picture.set_outline_color("black")
 		picture.draw_filled_rectangle(0,0, delete,delete)

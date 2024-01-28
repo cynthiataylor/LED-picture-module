@@ -57,10 +57,7 @@ while runtime >= 0:
                 bottom +=1
         y -=1
         
-        if bottom <= 64:
-                print(bottom)
-                
-            
+
         red = (red - 20) % 250
         blue = (blue - 20) % 250
         green = (blue + 20) % 255

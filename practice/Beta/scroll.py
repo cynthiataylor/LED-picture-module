@@ -44,10 +44,10 @@ while x < 1000:
         elif count % 9 == 0:
             y += 2
         picture.set_fill_color('black')
-        picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
+        picture.draw_filled_rectangle(0,0,128,128)
 
-    picture.draw_filled_square((x) * ((int(sys.argv[1])-20)/12),y,int(sys.argv[3]))
-    print(((x) * (int(sys.argv[1])-20),y))
+    picture.draw_filled_square((x) * ((128-20)/12),y,10)
+
          
     red = (red - 20) % 250
     blue = (blue - 20) % 250
