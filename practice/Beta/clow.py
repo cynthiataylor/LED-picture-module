@@ -42,7 +42,7 @@ while True:
         x = picture.get_position()[0]
         y =  picture.get_position()[1]
         x_position.append(x)
-        picture.display()
+        picture.draw_on_matrix()
         # time.sleep(sec)
         if i > 0 and i % 10 == 0:
             picture.rotate(90)
