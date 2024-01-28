@@ -21,7 +21,7 @@ positions = []
 counter = 0
 
 runtime = 800
-while runtime >=0
+while runtime >=0:
     for t in range(4):
         runtime -=1
         x+= 1
