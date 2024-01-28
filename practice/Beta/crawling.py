@@ -29,16 +29,16 @@ while True:
         picture.set_position(int(sys.argv[1])//2,int(sys.argv[1])-30)
         picture.draw_forward(20)
         picture.draw_on_matrix()
-        time.sleep(sec)
+        #time.sleep(sec)
         picture.set_fill_color("black")
         picture.set_outline_color("black")
         picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
         picture.rotate(50)
 
         picture.set_outline_color(red,green,blue)
-        picture.draw_text(move,25,"Welcome to computer science department",30)
+        picture.draw_text(move,25,"Welcome to computer science department",50)
         move -= 1
-        if move == -100:
+        if move == -800:
                 move = 100
         picture.draw_filled_circle(x,y,4)
         

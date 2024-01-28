@@ -1,9 +1,9 @@
-import Main.picture as picture
+import picture as picture
 import time
 import random
 
 
-picture.new_picture(64,64)
+picture.new_picture(128,128)
 
 # Set initial position 
 x, y = 40, 20
@@ -13,7 +13,7 @@ x, y = 40, 20
 
 picture.set_fill_color("black")
 picture.set_outline_color("black")
-picture.draw_filled_rectangle(0,0,124,124)
+picture.draw_filled_rectangle(0,0,128,128)
 
 red = 255
 green = 200
@@ -36,7 +36,7 @@ while True:
 	picture.rotate(angle)
 	angle += 1
 	picture.draw_on_matrix()
-	time.sleep(0.0000000001)
+	#time.sleep(0.0000000001)
 	
 	if angle == 160:
 		angle = random.randint(100,140)
@@ -52,7 +52,7 @@ while True:
 		i = 0
 	if change == 60:
 		change = 20
-	if delete == 64:
+	if delete == 128:
 		delete = 0
 	
 	if picture.get_position()[0] <=0 or picture.get_position()[1] <=0 or picture.get_position()[0] <=64 or picture.get_position()[1] <=64:
