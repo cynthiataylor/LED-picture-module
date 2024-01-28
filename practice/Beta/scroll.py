@@ -29,7 +29,7 @@ def snake(width):
         picture.draw_forward(20 + i)
         #picture.rotate(120)
         picture.draw_on_matrix()
-
+ 
 while x < 1000:
     picture.set_fill_color(red,green,blue)
     y = random.randint(4,int(sys.argv[1]))

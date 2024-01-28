@@ -32,12 +32,16 @@ green = 200
 blue = 45
 
 rounds = 0
-
-while True:
+runtime = 800
+while runtime >=0
     for j in range(100):
+        runtime -=1
         i += 1
         picture.set_fill_color(red,green,blue)
-        picture.set_outline_color('white')
+        if rounds > 0 and rounds % 2 == 0:
+            picture.set_outline_color(red,green,blue)
+        else:
+            picture.set_outline_color('white')
         picture.set_pen_width(1)
         picture.draw_forward(1)
        
@@ -58,8 +62,7 @@ while True:
         if x + 5 >= 120:
             i = 0
             picture.rotate(270)
-        if rounds == 3:
-            picture.set_outline_color(red,green,blue)
+
 
 
         red = (red - 20) % 250

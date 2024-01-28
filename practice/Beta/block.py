@@ -19,8 +19,11 @@ up = 120
 
 positions = []
 counter = 0
-while True:
+
+runtime = 800
+while runtime >=0
     for t in range(4):
+        runtime -=1
         x+= 1
 
         picture.set_fill_color(red,green,blue)

@@ -13,10 +13,10 @@ def search(path):
 def run(root):
     path = search(root)
     for i in range(len(path)):
-        if path[i].split('/')[-1] not in ['picture.py'] and path[i].split('/')[-1].endswith(".py") :
+        if path[i].split('/')[-1] in ['snake.py','crawling.py'] and path[i].split('/')[-1].endswith(".py") :
             #run the files in the directory
             subprocess.run(['python3',path[i]])
-            # print(f"Successfully executed __{path[i].split('/')[-1]}__")
+            print(f"Successfully executed __{path[i].split('/')[-1]}__")
             # sleep(2)
 
 if __name__ == "__main__":
