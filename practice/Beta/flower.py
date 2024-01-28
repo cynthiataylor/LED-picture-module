@@ -19,7 +19,7 @@ while True:
     i += 1
     picture.rotate(45)
     picture.draw_forward(-i//3)
-    picture.display()
+    picture.draw_on_matrix()
     time.sleep(0)
     red = (red - 2) % 250
     blue = (blue - 20) % 250

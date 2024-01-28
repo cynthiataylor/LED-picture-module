@@ -27,11 +27,8 @@ def circle(width,height):
             size = 2
         radius += 1
 
-        if computer == "L":
-            picture.display()
-        elif computer == "D":
-            picture.draw_on_matrix()
-            time.sleep(0.02)
+        picture.draw_on_matrix()
+        time.sleep(0.02)
 
         if radius >= 100:
             radius = 1
