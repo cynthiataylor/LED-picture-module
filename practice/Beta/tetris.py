@@ -26,7 +26,7 @@ i = 0
 
 taken_pos = []
 runtime = 0
-while runtime < 2000:
+while runtime < 1500:
 	runtime += 1
 	taken_pos.append(x)
 	taken_pos.append(y)
@@ -41,7 +41,7 @@ while runtime < 2000:
 	i += 1
 	if i == 4:
 		i = 0
-	if pos == 60:
+	if pos == 120:
 		# print(pos)
 		# picture.set_outline_color(red//2,green//3,blue//5)
 		pos = 0
@@ -49,8 +49,8 @@ while runtime < 2000:
 		y += 10
 		picture.set_position(x,y)
 	if x % 10:
-		x = random.randint(0,64) if random.randint(0,64) not in taken_pos else random.randint(0,64)
-		y = random.randint(0,64) if random.randint(0,64) not in taken_pos else random.randint(0,64)
+		x = random.randint(0,124) if random.randint(0,124) not in taken_pos else random.randint(0,124)
+		y = random.randint(0,124) if random.randint(0,124) not in taken_pos else random.randint(0,124)
 	# if y >= 6:
 	# 	y = 0
 	# 	x = 2
@@ -69,4 +69,3 @@ while runtime < 2000:
 	green = (blue + 20) % 255
 	
 	
-	print(taken_pos)

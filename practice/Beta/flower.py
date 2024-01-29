@@ -1,26 +1,26 @@
 import picture
 import time
+import sys
 
-picture.new_picture(600,600)
+picture.new_picture(128,128)
 picture.set_fill_color("black")
-picture.draw_filled_rectangle(0,0,600,600)
-size = 1
-red = 205
-green = 20
-blue = 10
-size = 2
-i = 1
-picture.set_position(300,300)
-while True:
-    picture.set_pen_width(size)
-    # picture.set_fill_color()
-    picture.set_outline_color(red,green,blue)
-    picture.draw_forward(i)
-    i += 1
-    picture.rotate(45)
-    picture.draw_forward(-i//3)
-    picture.draw_on_matrix()
-    time.sleep(0)
-    red = (red - 2) % 250
-    blue = (blue - 20) % 250
-    green = (blue + 20) % 255
+picture.draw_filled_rectangle(0,0,128,128)
+
+red = 30
+green = 250
+blue = 200
+
+pause = 0
+
+for i in range(0,60):
+    for k in range(50):
+        picture.set_outline_color(red,green,blue)
+        picture.draw_circle(1*(k*3),i*4,4)
+        picture.draw_on_matrix()
+        pause +=1
+        if pause >= 1500:
+            sys.exit()
+    
+    green = (green + 20) % 255
+    red = (red - 20) % 250
+    

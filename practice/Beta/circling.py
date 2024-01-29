@@ -11,12 +11,12 @@ def circle(width,height):
     green = 200
     blue = 45
 
-    radius = 2
+    radius = 1
     size = 2
 
     computer = "D"
 
-    runtime = 800
+    runtime = 500
     while runtime >=0:
         runtime -=1
         picture.set_outline_color(red ,green, blue)
