@@ -33,7 +33,7 @@ blue = 45
 
 rounds = 0
 
-for j in range(2000):
+for j in range(20000000):
     i += 1
     picture.set_fill_color(red,green,blue)
     if rounds > 0 and rounds % 2 == 0:
