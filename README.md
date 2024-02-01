@@ -11,6 +11,7 @@ You need go to practice and then go to Beta, which has files ready to be run on 
 There is a Python library we used called Picture. This library has many functions for drawing lines shapes, reading images, editing, and making patterns. 
 
 What you need is to create the canvas for your drawing :
+
 `- import picture`
 
 Create a canvas by providing width and height :
