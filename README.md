@@ -7,6 +7,8 @@ This repository has folders with different files that you can use to test your L
 You need go to practice and then go to Beta, which has files ready to be run on LED matrices.
 
 ## How to use the library we implemented to support LED matrices
+> [!NOTE]
+> You need to have knowledge of python to be able to use this library.
 
 There is a Python library we used called Picture. This library has many functions for drawing lines shapes, reading images, editing, and making patterns. 
 
