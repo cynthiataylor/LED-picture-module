@@ -45,7 +45,9 @@ The full documentation of all modules with all functions you can call to draw ca
 - https://oberlincs.github.io/picture/picture.html
 
  * But the only difference is that instead of using `picture.run()` or `picture.display()`, we use `picture.draw_on_matrix()`, which shows the output on the LED matrix.
- 
+
+> [!CAUTION]
+> make use after writing the code, you do picture.draw_on_matrix() to be able to display the drawing on LED matrix.
  
  
 
