@@ -63,14 +63,14 @@ To display the output on the matrix, you need to use :
 
 	import picture
 	
-	def set_canvas(width,height):
+	def set_canvas(width,height): # a function that set the canvas
 		picture.new_picture(width,height) # to set the canvas 
 		picture.set_fill_color("black") # to set the background color
 		picture.set_outline_color("black") # setting the color of the pen
 		picture.draw_filled_rectangle(0,0, width, height) # drawing the rectangle that fits the canvas to be all the same color
 	
 	def graph_square(width,height):
-		set_canvas(width,height)
+		set_canvas(width,height) # draw the canvas by calling the function.
 		picture.set_fill_color("red") 
 		picture.set_outline_color("red")
 		picture.draw_filled_square(width//2,height//2,width//4)
