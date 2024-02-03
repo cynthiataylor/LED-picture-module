@@ -62,27 +62,27 @@ To display the output on the matrix, you need to use :
 > THe sample code that draws a red square on the LED matrix
 
 	import picture
-
+	
 	def set_canvas(width,height):
 		picture.new_picture(width,height) # to set the canvas 
 		picture.set_fill_color("black") # to set the background color
 		picture.set_outline_color("black") # setting the color of the pen
-	 	picture.draw_filled_rectangle(0,0, width, height) # drawing the rectangle that fits the canvas to be all the same color
-   
-   	def graph_square(width,height):
-    		set_canvas(width,height)
-	  	picture.set_fill_color("red") 
-	   	picture.set_outline_color("red")
-	   	picture.draw_filled_square(width//2,height//2,width//4)
-     		picture.draw_on_matrix() # to display on the matrix
-
-
+		picture.draw_filled_rectangle(0,0, width, height) # drawing the rectangle that fits the canvas to be all the same color
+	
+	def graph_square(width,height):
+		set_canvas(width,height)
+		picture.set_fill_color("red") 
+		picture.set_outline_color("red")
+		picture.draw_filled_square(width//2,height//2,width//4)
+		picture.draw_on_matrix() # to display on the matrix
+	
+	
 	# The width and the height will depend on the size of your LED matrix
 	width = 64
 	height = 64
 	graph_square(width, height) # Call the function that draws the square on the matrix
-	    	
- 
+		
+	 
 
  	
  
