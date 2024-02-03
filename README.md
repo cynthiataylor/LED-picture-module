@@ -24,7 +24,7 @@ Create a canvas by providing width and height :
  
  	picture.set_fill_color(color)
  
-	use an RGB picture.set_fill_color(red,green,blue)
+	use an RGB picture.set_fill_color(240,50,200)
 
  You need to make the whole canvas change the color( you can draw a rectangle that starts from x = 0 and y = 0 but has a height and width equal to the canvas's dimensions.
 
