@@ -30,7 +30,7 @@ Create a canvas by providing width and height :
 
 To draw a rectangle:
 
-	picture.draw_rectangle(x,y,width,height)
+	picture.draw_rectangle(0,0,width,height)
 
 To draw a rectangle with a certain color
 
