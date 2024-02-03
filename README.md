@@ -44,7 +44,7 @@ To draw a rectangle with a certain color
 
 The full documentation of all modules with all functions you can call to draw can be found here:
 
-	https://oberlincs.github.io/picture/picture.html
+https://oberlincs.github.io/picture/picture.html
 
  * But the only difference is that instead of using `
 
@@ -70,7 +70,7 @@ To display the output on the matrix, you need to use :
 		picture.draw_filled_rectangle(0,0, width, height) # drawing the rectangle that fits the canvas to be all the same color
 	
 	def graph_square(width,height):
-		set_canvas(width,height) # draw the canvas by calling the function.
+		set_canvas(width, height) # Draw the canvas by calling the function.
 		picture.set_fill_color("red") 
 		picture.set_outline_color("red")
 		picture.draw_filled_square(width//2,height//2,width//4)
@@ -85,6 +85,24 @@ To display the output on the matrix, you need to use :
 	 
 
  	
+ ### For the programs well prepared for LED matrices in practice/Beta :
+
+ There is a file called file_runner, which is for running each other files in the same directory/ folder.
+
+It works using the library called os and subprocess, which manages running processes. If you don't want it to run some of the
+files, there is a list that excludes it; you can add any file you want to exclude from running.
+
+
+If you haven't used these libraries, they are very easy to learn, and you can use the official Python documentation on os/subprocess here:
+
+- https://docs.python.org/3/library/os.html#file-names-command-line-arguments-and-environment-variables
+- cheatsheet of all its methods: https://www.w3schools.com/python/module_os.asp
+- More simplified: https://www.tutorialsteacher.com/python/os-module
+
+  
+
+
+
  
  
 
