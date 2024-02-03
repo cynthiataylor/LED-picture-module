@@ -67,7 +67,7 @@ To display the output on the matrix, you need to use :
 		picture.new_picture(width,height) # to set the canvas 
 		picture.set_fill_color("black") # to set the background color
 		picture.set_outline_color("black") # setting the color of the pen
-	 	picture.draw_filled_rectangle(0,0, width, height) # drawing the rectangle that fits the 		canvas to be all the same color
+	 	picture.draw_filled_rectangle(0,0, width, height) # drawing the rectangle that fits the canvas to be all the same color
    
    	def graph_square(width,height):
     		set_canvas(width,height)
