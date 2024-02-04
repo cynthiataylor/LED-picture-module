@@ -11,8 +11,8 @@ x, y = 40, 20
 
 
 
-picture.set_fill_color("black")
-picture.set_outline_color("black")
+picture.set_fill_color(33, 4, 64)
+picture.set_outline_color(33, 4, 64)
 picture.draw_filled_rectangle(0,0,128,128)
 
 red = 255
