@@ -20,7 +20,7 @@ up = 120
 positions = []
 counter = 0
 
-runtime = 9000
+runtime = 100
 while True:
     for t in range(4):
         runtime -=1
