@@ -23,7 +23,7 @@ for i in range(100):
     picture.set_position(128//2,128//2)
     picture.draw_forward(i * 2)
     picture.draw_on_matrix()
-    time.sleep(1)
+    time.sleep(0.5)
     picture.draw_forward(460)
     picture.rotate(10)
 
