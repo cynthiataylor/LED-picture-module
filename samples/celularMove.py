@@ -43,8 +43,8 @@ while runtime > 0:
 	
 	
 	if i == change//6:
-		picture.set_fill_color("black")
-		picture.set_outline_color("black")
+		picture.set_fill_color(33, 4, 64)
+		picture.set_outline_color(33, 4, 64)
 		picture.draw_filled_rectangle(0,0, delete,delete)
 		#i = 0
 		change += 1
