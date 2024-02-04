@@ -4,9 +4,10 @@ This is the repository that contains some of the code that supports LED matrices
 
 This repository has folders with different files that you can use to test your LED matrices configuration with a Raspberry Pi4 and the monitor. 
 
-You need to go to practice and then to Beta, which has files ready to run on LED matrices.
+You need to go to samples and then to , which has files ready to run on LED matrices.
 
 ## How to use the library we implemented to support LED matrices
+
 > [!NOTE]
 > You need to have knowledge of Python to be able to use this library.
 
@@ -85,7 +86,7 @@ To display the output on the matrix, you need to use :
 	 
 
  	
- ### For the programs well prepared for LED matrices in practice/Beta :
+ ### For the programs well prepared for LED matrices in the folder samples:
 
  There is a file called file_runner, which is for running each other files in the same directory/ folder.
 
