@@ -5,9 +5,9 @@ import random
 import time
 import sys
 
-picture.new_picture(int(sys.argv[1]),int(sys.argv[1]))
+picture.new_picture(128,128)
 picture.set_fill_color("black")
-picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
+picture.draw_filled_rectangle(0,0,128,128)
 
 
 red = 255
@@ -32,12 +32,12 @@ def snake(width):
  
 while x < 500:
     picture.set_fill_color(red,green,blue)
-    y = random.randint(4,int(sys.argv[1]))
+    y = random.randint(4,128)
     count += 1
     x += 1
     positions.append((x,y))
     
-    if x >=int(sys.argv[1]):
+    if x >=128:
         x = 10
         if count % 4 == 0:
             x = 0
@@ -53,9 +53,7 @@ while x < 500:
     blue = (blue - 20) % 250
     green = (blue + 20) % 255
 
-    # display()
-    #snake(10)
     picture.draw_on_matrix()
-    time.sleep((float(sys.argv[2])))
+    time.sleep(0)
 
 

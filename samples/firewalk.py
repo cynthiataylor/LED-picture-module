@@ -17,9 +17,10 @@ def circle(width,height):
     rand_x = random.randrange(0, 128)
     rand_y = random.randrange(0, 128)
 
-    computer = sys.argv[-1]
-    while True: 
-        
+    computer = "D"
+    runtime = 2000
+    while runtime > 0: 
+        runtime -=1
         if color_index == 6:
             color_index = 0
 
@@ -52,7 +53,7 @@ def circle(width,height):
             picture.draw_filled_rectangle(0,0,width,height)
 
 
-width = int(sys.argv[1])
-height = int(sys.argv[1])
+width = 128
+height = 128
 
 circle(width,height)

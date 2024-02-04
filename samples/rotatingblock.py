@@ -2,22 +2,25 @@ import sys
 import picture
 import time
 
-picture.new_picture(int(sys.argv[1]),int(sys.argv[1]))
+picture.new_picture(128,128)
 picture.set_fill_color("black")
-picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
+picture.draw_filled_rectangle(0,0,128,128)
 
 red = 255
 green = 200
 blue = 45
 
-while True:
+runtime = 2000
+while runtime > 0: 
+    
     for i in range(100):
+        runtime -=1
         picture.set_fill_color(red,green,blue)
         picture.set_outline_color(red,green,blue)
         picture.set_pen_width(200)
         # picture.set_pen_x(300)
         # picture.set_pen_y(300)
-        picture.set_position(int(sys.argv[1])//2,int(sys.argv[1])//2)
+        picture.set_position(128//2,128//2)
         picture.draw_forward(i * 2)
         picture.display()
         time.sleep(0)
@@ -26,7 +29,7 @@ while True:
 
         picture.set_fill_color("black")
         picture.set_outline_color("black")
-        picture.draw_filled_rectangle(0,0,int(sys.argv[1]),int(sys.argv[1]))
+        picture.draw_filled_rectangle(0,0,128,128)
        
 
             
