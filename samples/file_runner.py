@@ -13,7 +13,7 @@ def search(path):
 def run(root):
     path = search(root)
     for i in range(len(path)):
-        if path[i].split('/')[-1] not in ['file_runner.py','picture.py','show.py','mult_file_mover.py'] and path[i].split('/')[-1].endswith(".py") :
+        if path[i].split('/')[-1] not in ['file_runner.py','picture.py','show.py','mult_file_mover.py','matrixArray.py'] and path[i].split('/')[-1].endswith(".py") :
             #run the files in the directory
             subprocess.run(['python3',path[i]])
             print(f"Successfully executed __{path[i].split('/')[-1]}__")
