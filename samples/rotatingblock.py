@@ -13,7 +13,7 @@ blue = 45
 runtime = 10
 # while runtime > 0: 
     
-for i in range(100):
+for i in range(35):
     print(i)
     runtime -=1
     picture.set_fill_color(red,green,blue)
