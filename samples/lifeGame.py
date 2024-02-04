@@ -20,11 +20,14 @@ class Grid:
         
 
     def background(self):
+        grid.setup()
+        
         set_fill_color(33, 4, 64)
         set_outline_color("white")
         draw_filled_rectangle(0,0,self.rows,self.cols)
     
     def drawGrid(self):
+        grid.background()
 
 
         for row in range(self.rows//self.size):
@@ -51,9 +54,6 @@ class Grid:
         draw_filled_square(random.choice(position)[0],random.choice(position)[1],self.size)
 
     def output(self,matrix,position):
-        grid.setup()
-        grid.background()
-
         grid.drawGrid()
 
         for i in range(len(matrix)):
