@@ -60,7 +60,7 @@ class Grid:
             if matrix[i] == 0:
                 grid.dead(position)
    
-            elif matrix[i] == 1:
+            elif matrix[i] == 5:
                 grid.alive(position)
         return matrix
 
@@ -77,5 +77,5 @@ for i in range(50):
     # if i > 0 and i % 5 == 0:
     grid.output(matrix,position)
     picture.draw_on_matrix()
-    time.sleep(0.5)
+    time.sleep(1)
 
