@@ -30,7 +30,7 @@ class Grid:
         for row in range(self.rows//self.size):
             for cols in range(self.cols//self.size):
                 # set_outline_color("white")
-                draw_square(self.rows// + (row * self.size),self.cols//16+ (cols * self.size),self.size)
+                draw_square(self.rows// 16 + (row * self.size),self.cols//16 + (cols * self.size),self.size)
                 self.positions.append([self.rows//16 + (row * self.size),self.cols//16 + (cols * self.size)])
         return grid.positions
 
