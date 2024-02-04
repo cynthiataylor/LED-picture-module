@@ -14,6 +14,7 @@ runtime = 10
 # while runtime > 0: 
     
 for i in range(100):
+    print(i)
     runtime -=1
     picture.set_fill_color(red,green,blue)
     picture.set_outline_color(red,green,blue)
@@ -24,7 +25,7 @@ for i in range(100):
     picture.draw_forward(i * 2)
     picture.draw_on_matrix()
     time.sleep(0.5)
-    picture.draw_forward(460)
+    picture.draw_forward(46)
     picture.rotate(10)
 
     picture.set_fill_color("black")
