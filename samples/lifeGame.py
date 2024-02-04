@@ -74,11 +74,8 @@ color = 'white'
 
 for i in range(50):
     
-    if i > 0 and i % 5 == 0:
-        grid.output(matrix,position)
-    # else:
-    #     grid2.output(matrix,position)
-
-        picture.draw_on_matrix()
+    # if i > 0 and i % 5 == 0:
+    grid.output(matrix,position)
+    picture.draw_on_matrix()
     time.sleep(0.5)
 
