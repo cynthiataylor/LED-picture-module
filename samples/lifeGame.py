@@ -79,6 +79,6 @@ for i in range(50):
     # else:
     #     grid2.output(matrix,position)
 
-    picture.draw_on_matrix()
+        picture.draw_on_matrix()
     time.sleep(0.5)
 
