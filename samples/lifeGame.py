@@ -80,5 +80,5 @@ for i in range(100):
         grid2.output(matrix,position,color)
 
     picture.draw_on_matrix()
-    time.sleep(1)
+    time.sleep(1.4)
 
