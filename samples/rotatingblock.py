@@ -10,7 +10,7 @@ red = 255
 green = 200
 blue = 45
 
-runtime = 2000
+runtime = 100
 while runtime > 0: 
     
     for i in range(100):
@@ -22,7 +22,7 @@ while runtime > 0:
         # picture.set_pen_y(300)
         picture.set_position(128//2,128//2)
         picture.draw_forward(i * 2)
-        picture.display()
+        picture.draw_on_matrix()
         time.sleep(0)
         picture.draw_forward(400)
         picture.rotate(10)
