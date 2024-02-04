@@ -65,8 +65,8 @@ class Grid:
         return matrix
 
              
-grid = Grid(128,128,int(sys.argv[1]))
-grid2 = Grid(128,128,int(sys.argv[1])) 
+grid = Grid(128,128,10)
+grid2 = Grid(128,128,10) 
 
 matrix = grid.matrix()
 position = grid.positions
