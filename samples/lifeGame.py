@@ -19,8 +19,8 @@ class Grid:
         new_picture(self.rows,self.cols)
         
 
-    def background(self,color):
-        set_fill_color(color)
+    def background(self):
+        set_fill_color("black")
         set_outline_color("white")
         draw_filled_rectangle(0,0,self.rows,self.cols)
     
@@ -40,28 +40,28 @@ class Grid:
                 self.gridPos.append(random.randrange(2))
         return grid.gridPos
 
-    def dead(self,position,color):
-        set_fill_color(color)
-        set_outline_color("black")
+    def dead(self,position):
+        set_fill_color("red")
+        set_outline_color("red")
         draw_filled_square(random.choice(position)[0],random.choice(position)[1],self.size)
 
-    def alive(self,position,color):
-        set_fill_color(color)
-        set_outline_color("black")
+    def alive(self,position):
+        set_fill_color("white")
+        set_outline_color("white")
         draw_filled_square(random.choice(position)[0],random.choice(position)[1],self.size)
 
-    def output(self,matrix,position,color):
+    def output(self,matrix,position):
         grid.setup()
-        grid.background('black')
+        grid.background()
 
         grid.drawGrid()
 
         for i in range(len(matrix)):
             if matrix[i] == 0:
-                grid.dead(position,color)
+                grid.dead(position)
    
             elif matrix[i] == 1:
-                grid.alive(position,color)
+                grid.alive(position)
         return matrix
 
              
@@ -72,12 +72,12 @@ matrix = grid.matrix()
 position = grid.positions
 color = 'white'
 
-for i in range(100):
+for i in range(50):
     
-    if i > 0 and i % 10 == 0:
-        grid.output(matrix,position,color)
+    if i > 0 and i % 5 == 0:
+        grid.output(matrix,position)
     else:
-        grid2.output(matrix,position,color)
+        grid2.output(matrix,position)
 
     picture.draw_on_matrix()
     time.sleep(1.4)
