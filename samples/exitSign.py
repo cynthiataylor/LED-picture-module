@@ -12,7 +12,7 @@ picture.draw_filled_rectangle(-1,-1,129,129)
 picture.draw_text(10, 2, "EXIT", font_size = 6)
 
 
-runtime = 2000
+runtime = 500
 while runtime > 0:
     runtime -=1
     color = 'black' if color == "red" else 'red'
