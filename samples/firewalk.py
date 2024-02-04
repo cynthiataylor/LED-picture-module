@@ -18,7 +18,7 @@ def circle(width,height):
     rand_y = random.randrange(0, 128)
 
     computer = "D"
-    runtime = 200
+    runtime = 100
     while runtime > 0: 
         runtime -=1
         if color_index == 6:
