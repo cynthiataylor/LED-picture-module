@@ -20,7 +20,7 @@ class Grid:
         
 
     def background(self):
-        set_fill_color("black")
+        set_fill_color(33, 4, 64)
         set_outline_color("white")
         draw_filled_rectangle(0,0,self.rows,self.cols)
     
