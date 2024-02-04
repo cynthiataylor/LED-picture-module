@@ -21,7 +21,7 @@ positions = []
 counter = 0
 
 
-for t in range(1000):
+for t in range(5000):
     x+= 1
 
     picture.set_fill_color(red,green,blue)
