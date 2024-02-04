@@ -57,7 +57,7 @@ class Grid:
         grid.drawGrid()
 
         for i in range(len(matrix)):
-            if matrix[i] == 3:
+            if matrix[i] == 0:
                 grid.dead(position,color)
    
             elif matrix[i] == 1:
