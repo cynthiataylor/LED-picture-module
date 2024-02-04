@@ -45,7 +45,7 @@ class Grid:
 
     def dead(self,position):
         set_fill_color("red")
-        set_outline_color("red")
+        set_outline_color("white")
         draw_filled_square(random.choice(position)[0],random.choice(position)[1],self.size)
 
     def alive(self,position):
