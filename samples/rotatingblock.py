@@ -10,21 +10,21 @@ red = 255
 green = 200
 blue = 45
 
-runtime = 100
+runtime = 800
 while runtime > 0: 
     
     for i in range(100):
         runtime -=1
         picture.set_fill_color(red,green,blue)
         picture.set_outline_color(red,green,blue)
-        picture.set_pen_width(200)
+        picture.set_pen_width(40)
         # picture.set_pen_x(300)
         # picture.set_pen_y(300)
         picture.set_position(128//2,128//2)
         picture.draw_forward(i * 2)
         picture.draw_on_matrix()
-        time.sleep(0)
-        picture.draw_forward(400)
+        time.sleep(1)
+        picture.draw_forward(460)
         picture.rotate(10)
 
         picture.set_fill_color("black")
